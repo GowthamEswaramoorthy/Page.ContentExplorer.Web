@@ -10,7 +10,7 @@ builder.Services.Configure<CookiePolicyOptions>(options =>
 });
 
 builder.Services.AddRazorPages();
-builder.Services.AddScoped<IPageAnalyse, PageAnalyseService>();
+builder.Services.AddScoped<IPageAnalyseService, PageAnalyseService>();
 builder.Services.AddAntiforgery(o => o.HeaderName = "XSRF-TOKEN");
 
 var app = builder.Build();

@@ -3,7 +3,7 @@ using Page.ContentExplorer.Web.Models;
 
 namespace Page.ContentExplorer.Web.Services
 {
-    public interface IPageAnalyse
+    public interface IPageAnalyseService
     {
         Uri RequestedUrl { get; set; }
 

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Page.ContentExplorer.Web.Services
 {
-    public class PageAnalyseService : IPageAnalyse
+    public class PageAnalyseService : IPageAnalyseService
     {
         public Uri RequestedUrl { get; set; }
 

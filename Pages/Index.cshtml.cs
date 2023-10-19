@@ -13,8 +13,8 @@ namespace Page.ContentExplorer.Web.Pages
         public IEnumerable<ImageReportModel> ImagesList;
         public IEnumerable<WordReportModel> WordsList;
         public bool IsEmpty { get; set; } = false;
-        private readonly IPageAnalyse _pageAnalyse;
-        public IndexModel(IPageAnalyse pageAnalyse)
+        private readonly IPageAnalyseService _pageAnalyse;
+        public IndexModel(IPageAnalyseService pageAnalyse)
         {
             _pageAnalyse = pageAnalyse;
         }
