@@ -1,0 +1,31 @@
+﻿@model IndexModel
+@if (Model != null && Model.WordsList != null)
+{
+    <div id="wordsData" class="words-display">
+        @foreach (var wordsInfo in Model.WordsList)
+        {
+            <span>Total Words Found :  <b>@wordsInfo.TotalWords</b> </span>
+            <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+            <script type="text/javascript">
+                var chart = new CanvasJS.Chart("chartContainer", {
+                    animationEnabled: true,
+                    theme: "light1",
+                    exportEnabled: true,
+                    title: {
+                        text: "Top 10 words are used in the webpage"
+                    },
+                    axisY: {
+                        title: "Number of Words",
+                        gridThickness: 0
+                    },
+                    data: [{
+                        type: "bar",
+                        indexLabel: "{y}",
+                        dataPoints: @Html.Raw(wordsInfo.DataPoints)
+                                                                    }]
+                });
+                chart.render();
+            </script>
+        }
+    </div>
+}
