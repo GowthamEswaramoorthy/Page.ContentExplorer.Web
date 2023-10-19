@@ -12,7 +12,6 @@
 ## Prerequisites
 1. Visual Studio 2022
 1. .Net 6.0
-1. 
 ## Project Overview
 
 In this project, the user inputs a URL into a text box. When they click the "Analyze" button, it triggers the "OnPostAnalyse" method with the provided URL as a parameter. The "LoadHtmlDocument" method utilizes the HttpClient to fetch the web page and loads its HTML content as an "HtmlDocument."
